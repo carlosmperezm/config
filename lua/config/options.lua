@@ -9,7 +9,16 @@ vim.opt.hlsearch = true
 vim.opt.showcmd = true
 vim.opt.cmdheight = 0
 vim.opt.scrolloff = 10
-vim.opt.incommand = "split"
+vim.opt.inccommand = "split"
+vim.opt.breakindent = true
+vim.opt.wrap = true -- Wrap the text
+vim.opt.backspace = { "start", "eol", "indent" }
+vim.opt.path:append({ "**" })
+vim.opt.wildignore:append({ "*/node_modules/*" })
+vim.opt.splitkeep = "cursor"
+vim.opt.mouse = "" -- Disable mouse
+vim.opt.formatoptions:append({ "r" })
+vim.opt.showtabline = 0 -- Disable the tabs on top
 
 -- Allow neovim to set the title of the window to the name of the current buffer
 vim.opt.title = true

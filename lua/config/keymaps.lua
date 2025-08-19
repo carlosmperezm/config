@@ -19,3 +19,6 @@ vim.opt.scrolloff = 0
 
 -- Switch tabs
 vim.api.nvim_set_keymap("n", "<Tab>", "<Leader>ww", { noremap = false })
+
+-- Select all
+vim.keymap.set("n", "<C-a>", "gg<S-v>G")
