@@ -1,8 +1,8 @@
 return {
-  -- -- add gruvbox
-  { "ellisonleao/gruvbox.nvim", lazy = true },
-  --
-  -- -- Configure LazyVim to load gruvbox
+  -- add gruvbox
+  { "ellisonleao/gruvbox.nvim", lazy = false },
+
+  -- Configure LazyVim to load gruvbox
   -- {
   --   "LazyVim/LazyVim",
   --   opts = {
@@ -10,7 +10,7 @@ return {
   --   },
   -- },
   -- add zephyr
-  { "glepnir/zephyr-nvim", lazy = true },
+  -- { "glepnir/zephyr-nvim", lazy = true },
   --
   -- -- Configure LazyVim to load zephyr
   -- {
@@ -20,7 +20,7 @@ return {
   --   },
   -- },
   --
-  --  Add Github colorscheme
+  -- Add Github colorscheme
   {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
@@ -28,18 +28,18 @@ return {
     priority = 1000,
   },
   {
-
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = function()
-        vim.schedule(function()
-          if vim.o.background == "light" then
-            vim.cmd("colorscheme github_light")
-          else
-            vim.cmd("colorscheme github_dark")
-          end
-        end)
-      end,
+      colorscheme = "tokyonight",
+      -- colorscheme = function()
+      -- vim.schedule(function()
+      --   if vim.o.background == "light" then
+      --     vim.cmd("colorscheme tokyonight-day")
+      --   else
+      --     vim.cmd("colorscheme github_dark")
+      --   end
+      -- end)
+      -- end,
     },
   },
 }
